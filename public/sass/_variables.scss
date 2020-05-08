@@ -1,0 +1,19 @@
+$primary_color: #FE6D0F;
+$secondary_color: #D8D570;
+
+$font-weights : (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+);
+
+$small-device: 600px;
+$medium-device: 992px;
+$large-device: 1200px;  
+
+@mixin main-link-content($weight: regular, $padding: .7rem) {
+    text-decoration: none;
+    color: white;
+    font-weight: weight($weight);
+    padding: $padding;
+}

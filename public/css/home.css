@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FE6D0F;
+}
+
+.main-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  padding: 0.7rem;
+}
+
+.main-toggle {
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  display: none;
+  font-size: 1.5rem;
+}
+
+.main-form {
+  display: block;
+  margin: auto 0;
+  width: 50%;
+}
+
+.main-form-text {
+  border: none;
+  width: 80%;
+  padding: .2rem;
+  border-radius: 10px;
+}
+
+.main-form-text::-webkit-input-placeholder {
+  color: #FE6D0F;
+  padding: .7rem;
+}
+
+.main-form-text:-ms-input-placeholder {
+  color: #FE6D0F;
+  padding: .7rem;
+}
+
+.main-form-text::-ms-input-placeholder {
+  color: #FE6D0F;
+  padding: .7rem;
+}
+
+.main-form-text::placeholder {
+  color: #FE6D0F;
+  padding: .7rem;
+}
+
+.main-form-button {
+  width: 10%;
+  padding: .2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #FE6D0F;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav-item {
+  padding: .7rem;
+  margin-left: -1px;
+  border: 1px red solid;
+}
+
+.main-nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .main-link {
+    display: none;
+  }
+  .main-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 0.1rem;
+  }
+  .main {
+    display: block;
+  }
+  .main-form {
+    display: none;
+    width: 100%;
+    padding: .7rem;
+    text-align: center;
+    border-top: 1px solid red;
+  }
+  .main-form-text {
+    width: 60%;
+  }
+  .main-form-button {
+    width: 20%;
+  }
+  .main-nav-list {
+    display: none;
+    width: 100%;
+  }
+  .main-nav-item {
+    text-align: center;
+    margin-top: -1px;
+    border-left: 0;
+    border-right: 0;
+  }
+  .active {
+    display: block;
+  }
+}
+/*# sourceMappingURL=home.css.map */

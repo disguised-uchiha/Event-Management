@@ -1,0 +1,119 @@
+@import "./resets";
+@import "./variables";
+
+@function weight($weight-name) {
+    @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+.container {
+    width: 100%;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-color;
+}
+
+.main-link {
+    @include main-link-content();
+}
+
+.main-toggle {
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    display: none;
+    font-size: 1.5rem;
+}
+
+.main-form {
+    display: block;
+    margin: auto 0;
+    width: 50%;
+}
+
+.main-form-text {
+    border: none;
+    width: 80%;
+    padding: .2rem;
+    border-radius: 10px;
+}
+
+.main-form-text::placeholder {
+    color: $primary-color;
+    padding: .7rem;
+}
+
+.main-form-button {
+    width: 10%;
+    padding: .2rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: weight(bold);
+    color: $primary-color;
+}
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav-item {
+    padding: .7rem;
+    margin-left: -1px;
+    border: 1px red solid;
+}
+
+.main-nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: weight(medium);
+}
+
+@media screen and (max-width: $small-device) {
+    .container {
+        width: 100%;
+    }
+    .main-link {
+        display: none;
+    }
+    .main-toggle {
+        display: flex;
+        justify-content: space-between;
+    }
+    a {
+        @include main-link-content(bold, .1rem);
+    }
+    .main {
+        display: block;
+    }
+    .main-form {
+        display: none;
+        width: 100%;
+        padding: .7rem;
+        text-align: center;
+        border-top: 1px solid red;
+    }
+    .main-form-text {
+        width: 60%;
+    }
+    .main-form-button {
+        width: 20%;
+    }
+    .main-nav-list {
+        display: none;
+        width: 100%;
+    }
+    .main-nav-item {
+        text-align: center;
+        margin-top: -1px;
+        border-left: 0;
+        border-right: 0;
+    }
+    .active {
+        display: block;
+    }
+}
