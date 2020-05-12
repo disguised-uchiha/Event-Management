@@ -1,5 +1,9 @@
-$primary_color: #FE6D0F;
-$secondary_color: #D8D570;
+// $primary_color: #FE6D0F;
+// $secondary_color: #D8D570;
+$primary_color :#FF5733;
+$secondary_color: #FFC300;
+$kinda-red: #C70039;
+$kinda-purple: #581845;
 
 $font-weights : (
     "regular": 400,
@@ -16,4 +20,14 @@ $large-device: 1200px;
     color: white;
     font-weight: weight($weight);
     padding: $padding;
+}
+
+@function weight($weight-name) {
+    @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+@mixin section-card-content-container($width, $height) {
+    padding: .5rem;
+    width: $width;
+    height: $height;
 }

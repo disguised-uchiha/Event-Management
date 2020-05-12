@@ -6,7 +6,10 @@
     <title>RCOE Events</title>
     <!-- local css links -->
     <link rel="stylesheet" href="/public/css/home.css" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <!-- cdn -->
     <!-- <link
       rel="stylesheet"
@@ -16,38 +19,127 @@
     /> -->
   </head>
   <body>
-    <header class="container main">
+    <header class="container main" style="position: sticky; top: 0;">
       <a href="#" class="main-link">RCOE Events</a>
       <div class="main-toggle">
-      <a href="#" class="main-toogle-link">RCOE Events</a>
+        <a href="#">RCOE Events</a>
         <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
-        <form action="#" class="main-form">
-          <input type="text" class="main-form-text" name="searchEvent" id="searchEventId" placeholder="Search Event">
-          <input type="button" class="main-form-button" name="searchButton" value="Search">
-        </form>
-        <nav class="main-navbar">
-          <ul class="main-nav-list">
-            <li class="main-nav-item">
-              <a href="#" class="main-nav-link">Home</a>
-            </li>
-            <li class="main-nav-item">
-              <a href="#" class="main-nav-link">Sign In</a>
-            </li>
-            <li class="main-nav-item">
-              <a href="#" class="main-nav-link">Sign Up</a>
-            </li>
-          </ul>
-        </nav>
+      <form action="#" class="main-form">
+        <input
+          type="text"
+          class="main-form-text"
+          name="searchEvent"
+          id="searchEventId"
+          placeholder="Search Event"
+        />
+        <!-- <input type="button" class="main-form-button" name="searchButton" value="Search"> -->
+        <button type="submit" class="main-form-button" name="searchButtonIcon">
+          <i
+            class="fa fa-search"
+            aria-hidden="true"
+            class="main-form-button-icon"
+          ></i>
+        </button>
+      </form>
+      <nav class="main-navbar">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="#" class="main-nav-link">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#" class="main-nav-link">Log In</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#" class="main-nav-link">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <section class="container section-wrapper">
+      <div class="section-card">
+        <div class="section-card-image-wrapper">
+          <img
+            src="/public/images/796061-naruto-quotes-wallpapers-1920x1200-download-free.jpg"
+            class="section-card-image"
+            alt="event cover image"
+          />
+        </div>
+        <div class="section-card-content-wrapper">
+          <div class="section-card-content-header">Cycling on the rcoe principals head</div>
+          <div class="section-card-content-description"> Lorem ipsum Voluptate quaerat dolore aliquid rem sequi omnis repellendus accusamus? Placeat asfhkla dfaksl fkjlashdf dsadhfs lsdfh sld quos aspernatur exercitation quae et odit ea ad? heljlrsldf</div>
+          <div class="section-card-content-date">12 May</div>
+          <div class="section-card-content-footer">
+            <div class="section-card-content-price">
+              Free
+            </div>
+            <div class="section-card-content-apply"><a href="#" class="button">Apply</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card">
+          <div class="section-card-image-wrapper">
+            <img
+              src="/public/images/naruto.jpg"
+              class="section-card-image"
+              alt="event cover image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card">
+          <div class="section-card-image-wrapper">
+            <img
+              src="/public/images/649533.png"
+              class="section-card-image"
+              alt="event cover image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card">
+          <div class="section-card-image-wrapper">
+            <img
+              src="/public/images/649533.png"
+              class="section-card-image"
+              alt="event cover image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card">
+          <div class="section-card-image-wrapper">
+            <img
+              src="/public/images/649533.png"
+              class="section-card-image"
+              alt="event cover image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-card">box4</div>
+      <div class="section-card">box4</div>
+      <div class="section-card">box4</div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <script>
-      $(document).ready(function(){
-        $('.main-toggle').click(function(){
-          $('.main-form').toggleClass('active').slideToggle();
-          $('.main-nav-list').toggleClass('active').slideToggle();
-        })
-      })
+      
+      $(document).ready(function () {
+        $(".main-toggle").click(function () {
+          $(".main-form").toggleClass("active").slideToggle();
+          $(".main-nav-list").toggleClass("active").slideToggle();
+        });
+      });
+      
     </script>
   </body>
 </html>

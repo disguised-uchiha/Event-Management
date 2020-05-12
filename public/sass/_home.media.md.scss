@@ -1,0 +1,8 @@
+// media query for tablets ------------------
+@media screen and (min-width:$small-device) and (max-width:$medium-device) {
+    .section-wrapper {
+      width: 80%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
