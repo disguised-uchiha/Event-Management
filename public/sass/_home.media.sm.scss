@@ -54,6 +54,8 @@
 
     .section-wrapper {
         grid-template-columns: repeat(1, 80%);
+        grid-gap: 1rem;
+        padding: 1rem;
     }
 
 }

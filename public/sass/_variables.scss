@@ -1,33 +1,32 @@
 // $primary_color: #FE6D0F;
 // $secondary_color: #D8D570;
-$primary_color :#FF5733;
-$secondary_color: #FFC300;
-$kinda-red: #C70039;
-$kinda-purple: #581845;
+$primary_color: #c70039;
+$secondary_color: rgb(255, 195, 0);
+$background_color: white;
 
-$font-weights : (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700,
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
 );
 
 $small-device: 600px;
 $medium-device: 992px;
-$large-device: 1200px;  
+$large-device: 1200px;
 
-@mixin main-link-content($weight: regular, $padding: .7rem) {
-    text-decoration: none;
-    color: white;
-    font-weight: weight($weight);
-    padding: $padding;
+@mixin main-link-content($weight: regular, $padding: 0.7rem) {
+  text-decoration: none;
+  color: white;
+  font-weight: weight($weight);
+  padding: $padding;
 }
 
 @function weight($weight-name) {
-    @return map-get($map: $font-weights, $key: $weight-name);
+  @return map-get($map: $font-weights, $key: $weight-name);
 }
 
 @mixin section-card-content-container($width, $height) {
-    padding: .5rem;
-    width: $width;
-    height: $height;
+  padding: 0.5rem;
+  width: $width;
+  height: $height;
 }

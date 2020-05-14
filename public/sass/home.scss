@@ -6,7 +6,7 @@
 }
 
 .main {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -58,7 +58,6 @@
   .main-nav-item {
     padding: 0.7rem;
     margin-left: -1px;
-    border: 1px red solid;
   }
   
   .main-nav-link {
@@ -69,12 +68,12 @@
 }
 
 .section-wrapper {
-  width: 80%;
-  background-color: green;
+  width: 100%;
+  background-color: $background_color;
   margin: 0 auto;
-  padding: 1em;
+  padding: 2em;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   
@@ -101,28 +100,31 @@
     .section-card-content-wrapper {
       @include section-card-content-container(100%, 50%);
       display: grid;
-      grid-template-rows: .7fr 2.6fr 0.5fr 0.5fr;
-    }
-    
-    .section-card-content-header {
-      font-weight: weight(bold);
-      text-align: center;
-      font-size: 1.2em;
-      text-align: justify;
-      text-transform: uppercase;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    
-    .section-card-content-description {
-      font-weight: weight(regular);
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-    .section-card-content-footer {
-      display: flex;
-      justify-content: space-between;
+      grid-template-rows: .7fr 2.6fr 0.5fr 0.8fr;
+      // align-items: center;
+
+      .section-card-content-header {
+        font-weight: weight(bold);
+        text-align: center;
+        font-size: 1.2em;
+        text-align: justify;
+        text-transform: uppercase;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      
+      .section-card-content-description {
+        font-weight: weight(regular);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
+      }
+      .section-card-content-footer {
+        display: flex;
+        justify-content: space-between;
+      }
+      
     }
     
     .button {
