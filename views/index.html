@@ -10,6 +10,10 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
     <!-- cdn -->
     <!-- <link
       rel="stylesheet"
@@ -23,9 +27,9 @@
       <a href="#" class="main-link">RCOE Events</a>
       <div class="main-toggle">
         <a href="#">RCOE Events</a>
-        <i class="fa fa-bars" aria-hidden="true"></i>
+        <i class="fa fa-bars" id="main-toggle-icon-id" aria-hidden="true"></i>
       </div>
-      <form action="#" class="main-form">
+      <form action="#" class="main-form" id="main-form-id">
         <input
           type="text"
           class="main-form-text"
@@ -33,7 +37,6 @@
           id="searchEventId"
           placeholder="Search Event"
         />
-        <!-- <input type="button" class="main-form-button" name="searchButton" value="Search"> -->
         <button type="submit" class="main-form-button" name="searchButtonIcon">
           <i
             class="fa fa-search"
@@ -43,7 +46,7 @@
         </button>
       </form>
       <nav class="main-navbar">
-        <ul class="main-nav-list">
+        <ul class="main-nav-list" id="main-nav-list-id">
           <li class="main-nav-item">
             <a href="#" class="main-nav-link">Home</a>
           </li>
@@ -77,7 +80,7 @@
           </div>
         </div>
       </div>
-      <div class="section-card">
+      <!-- <div class="section-card">
         <div class="section-card">
           <div class="section-card-image-wrapper">
             <img
@@ -123,7 +126,7 @@
       </div>
       <div class="section-card">box4</div>
       <div class="section-card">box4</div>
-      <div class="section-card">box4</div>
+      <div class="section-card">box4</div> -->
     </section>
 
     <script
@@ -132,14 +135,18 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      
-      $(document).ready(function () {
-        $(".main-toggle").click(function () {
-          $(".main-form").toggleClass("active").slideToggle();
-          $(".main-nav-list").toggleClass("active").slideToggle();
-        });
+      // ----------------------Toggle Navigation using jQuery----------
+      // $(document).ready(function () {
+      //   $(".main-toggle").click(function () {
+      //     $(".main-form").toggleClass("active").slideToggle();
+      //     $(".main-nav-list").toggleClass("active").slideToggle();
+      //   });
+      // });
+      // ----------------------------------------------------------------
+      document.getElementById("main-toggle-icon-id").addEventListener('click',()=>{
+        document.getElementById("main-form-id").classList.toggle("active");
+        document.getElementById("main-nav-list-id").classList.toggle("active");
       });
-      
     </script>
   </body>
 </html>
