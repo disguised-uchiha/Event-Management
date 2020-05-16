@@ -141,7 +141,17 @@
     }
   }
 }
-
+footer {
+  background-color: $shade1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  .footer-heart {
+    color: red;
+    display: inline;
+  }
+}
 // media query for phone --------------------------------
 @import "./home.media.sm";
 

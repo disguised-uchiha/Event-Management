@@ -188,6 +188,23 @@ a {
   font-weight: 700;
 }
 
+footer {
+  background-color: #24292E;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2px;
+}
+
+footer .footer-heart {
+  color: red;
+  display: inline;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     width: 100%;

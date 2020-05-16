@@ -79,8 +79,24 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #003366;
+  background: #0a85ff;
   opacity: 0.5;
+}
+
+.signup-create-account {
+  font-size: small;
+  padding-top: 1rem;
+  margin-bottom: 0;
+}
+
+.signup-create-account a {
+  color: #e2862f;
+  text-transform: uppercase;
+}
+
+.signup-create-account a:hover {
+  color: #d3e24e;
+  border-bottom: 1px solid #d3e24e;
 }
 
 @media screen and (max-width: 992px) {
