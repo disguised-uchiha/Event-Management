@@ -1,0 +1,103 @@
+@import "../resets";
+
+$primary_color: #c70039;
+$secondary_color: rgb(255, 195, 0);
+
+$shade1: #24292E;
+$shade2: #3F4448;
+
+$small-device: 600px;
+$medium-device: 992px;
+$large-device: 1200px;
+
+body {
+    background-color: $shade1;
+}
+body i {
+    font-family:'FontAwesome'!important;
+    font-style: normal;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $primary_color;
+    &-item {
+        list-style-type: none;
+        margin: .5rem 1rem;
+        text-transform: uppercase;
+        &-link {
+            color: #fff;
+            transition: border-bottom 300ms;
+        }
+        &-link:hover {
+            border-bottom: 2px solid greenyellow;
+        }
+    }
+}
+main {
+    height: 40vh;
+}
+
+.main-link-container {
+    height: 100%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main-link {
+        color: #fff;
+        border: 1px solid;
+        padding: 1rem;  
+        transition: 300ms; 
+    }
+    .main-link:hover {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.603);
+        border-radius: 1rem;
+        .main-link-icon {
+            color: blue;
+        }
+    }
+}
+
+.section-cards-wrapper{
+    background-color: $shade1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    grid-gap: 2rem;
+    justify-content: center;
+    .section-card {
+        width: 100%;
+        height: 100px;
+        background-color: $shade2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        color: #fff;
+        border: 1px solid #fff;
+        .section-card-list a {
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width: $small-device) {
+    .nav-list {
+        justify-content: center;
+    }
+    .section-cards-wrapper {
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (min-width: $small-device) and (max-width: $medium-device) {
+    .section-cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+        .section-card {
+            height: 150px;
+        }
+    }
+}

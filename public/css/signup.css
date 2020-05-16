@@ -5,10 +5,32 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  background: url("../images/signup-min.jpg");
+  background: url("../images/login.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.signup-back-link {
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-transform: uppercase;
+  padding: .3rem;
+  border-radius: 12px;
+  border: 1px solid #0a9df8;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 350ms ease-in;
+  transition: background-color 350ms ease-in;
+}
+
+.signup-back-link:hover {
+  background-color: #0a9df8;
 }
 
 .signup-wrap {
@@ -26,7 +48,9 @@ h2 {
   text-transform: uppercase;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type="text"],
+input[type="password"],
+input[type="email"] {
   width: 100%;
   padding: 12px 5px;
   background: rgba(0, 0, 0, 0.1);
@@ -38,22 +62,30 @@ input[type=text], input[type=password], input[type=email] {
   font-weight: bold;
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 100%;
   padding: 10px 0;
   margin-top: 30px;
   outline: none;
   border: none;
-  background: #60adde;
+  background: #0a9df8;
   opacity: 0.8;
   border-radius: 20px;
   font-size: 20px;
   color: #fff;
   text-transform: uppercase;
+  -webkit-transition: background-color 350ms ease-out;
+  transition: background-color 350ms ease-out;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background: #003366;
   opacity: 0.5;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background: url("../images/signup-mobile.jpg");
+  }
 }
 /*# sourceMappingURL=signup.css.map */

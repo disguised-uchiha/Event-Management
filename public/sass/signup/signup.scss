@@ -1,51 +1,80 @@
 @import "../resets";
 
 body {
-    background: url('../images/signup-min.jpg');
-    background-size: cover;
-    background-position: center;
+  background: url("../images/login.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.signup-back-link {
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-transform: uppercase;
+  padding: .3rem;
+  border-radius: 12px;
+  border: 1px solid #0a9df8;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 350ms ease-in;
+}
+.signup-back-link:hover {
+  background-color: #0a9df8;
 }
 .signup-wrap {
-    max-width: 350px;
-    border-radius: 20px;
-    padding: 40px;
-    background: rgba(0,0,0,0.8);
-    margin: auto;
-    margin-top: 100px;
-    color: #fff;
+  max-width: 350px;
+  border-radius: 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: auto;
+  margin-top: 100px;
+  color: #fff;
 }
+
 h2 {
-    text-align: center;
-    text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-input[type=text], input[type=password], input[type=email] {
-    width: 100%;
-    padding: 12px 5px;
-    background: rgba(0,0,0,0.1);
-    outline: none;
-    border: none;
-    border-bottom: 1px dotted #fff;
-    color: #fff;
-    margin: 5px;
-    font-weight: bold;;
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 5px;
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+  margin: 5px;
+  font-weight: bold;
 }
 
-input[type=submit] {
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 30px;
-    outline: none;
-    border: none;
-    background: #60adde;
-    opacity: 0.8;
-    border-radius: 20px;
-    font-size: 20px;
-    color: #fff;
-    text-transform: uppercase;
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  background: #0a9df8;
+  opacity: 0.8;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 350ms ease-out;
 }
 
-input[type=submit]:hover {
-    background: #003366;
-    opacity: 0.5;
+input[type="submit"]:hover {
+  background: #003366;
+  opacity: 0.5;
+}
+
+$small-device: 600px;
+$medium-device: 992px;
+$large-device: 1200px;
+@media screen and (max-width: $medium-device) {
+  body {
+    background: url("../images/signup-mobile.jpg");
+  }
 }
