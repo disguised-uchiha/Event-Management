@@ -78,11 +78,11 @@
   
   .section-card {
     width: 100%;
-    height: 80vh;
     background-color: $primary-color;
     color: white;
     border-radius: 5%;
     box-shadow: 2px 4px 0.7rem rgb(44, 43, 43);
+    transition: box-shadow 300ms;
 
     .section-card-image-wrapper {
       @include section-card-content-container(100%, 50%);
@@ -100,7 +100,6 @@
       @include section-card-content-container(100%, 50%);
       display: grid;
       grid-template-rows: .7fr 2.6fr 0.5fr 0.8fr;
-      // align-items: center;
 
       .section-card-content-header {
         font-weight: weight(bold);
@@ -116,6 +115,7 @@
       .section-card-content-description {
         font-weight: weight(regular);
         text-overflow: ellipsis;
+        // text-align: justify;
         overflow: hidden;
         
       }
@@ -139,6 +139,9 @@
       background-color: $secondary-color;
       font-weight: weight(bold);
     }
+  }
+  .section-card:hover {
+    box-shadow: 4px 8px 1rem rgb(44, 43, 43);
   }
 }
 footer {

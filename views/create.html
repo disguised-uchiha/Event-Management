@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/create.css">
     <title>Create Event</title>
 </head>
 <body>
     <main class="main-container">
-
+        <div class="main-form-wrapper">
+            <div action="#">
+                <div class="event-header-container">
+                    <label for="event-name">Event Name:</label>
+                    <input type="text" name="event-name" id="event-name">
+                    <label for="event-description">Description: </label>
+                    <textarea name="event-description"></textarea>
+                </div>
+                <div class="event-img-container">
+                    <input type="file" class="event-img" name="upload-img" accept="image/*">
+                </div>
+                <div class="event-date-container">
+                    <label for="event-date">Date: </label>
+                    <input type="date" name="event-date">
+                </div>
+                <div class="event-location-container">
+                    <label for="event-location">Location: </label>
+                    <input type="text" name="event-location">
+                </div>
+                <div class="event-select-options-container">
+                    <label for="event-type">Type: </label>
+                    <select name="event-type" id="event-type-id">
+                        <option value="Paid">Paid </option>
+                        <option value="Free">Free </option>
+                    </select>
+                    <label for="certified">Certificate: </label>
+                    <select name="certified">
+                        <option value="certificate-yes">Yes </option>
+                        <option value="certificate-no">No </option>
+                    </select>
+                </div>
+                <div class="event-charge-container" id="event-charge-id">
+                    <label for="event-fees" class="event-charge">Fees: </label>
+                    <input type="text" name="event-fees" class="event-charge">
+                </div>
+                <div class="event-create-btn-container">
+                    <input type="submit" value="Create">
+                </div>
+            </form>
+        </div>
     </main>
+    <script src="../public/js/create.js"></script>
 </body>
 </html>
