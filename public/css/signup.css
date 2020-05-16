@@ -13,6 +13,7 @@ body {
   background: url("../images/login.jpg");
   background-size: cover;
   background-position: center;
+  background-color: #24292E;
 }
 
 .signup-back-link {

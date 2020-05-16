@@ -1,9 +1,11 @@
 @import "../resets";
+$shade1: #24292E;
 
 body {
   background: url("../images/login.jpg");
   background-size: cover;
   background-position: center;
+  background-color: $shade1;
 }
 
 .signup-back-link {
