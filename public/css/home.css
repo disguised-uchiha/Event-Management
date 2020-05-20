@@ -197,6 +197,9 @@ a {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #24292E;
   color: white;
   display: -webkit-box;
