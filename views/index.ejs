@@ -19,27 +19,30 @@
     <nav class="main-navbar">
       <ul class="main-nav-list" id="main-nav-list-id">
         <li class="main-nav-item">
-          <a href="index.html" class="main-nav-link">Home</a>
+          <a href="/" class="main-nav-link">Home</a>
         </li>
         <li class="main-nav-item">
-          <a href="login.html" class="main-nav-link">LogIn</a>
+          <a href="/login" class="main-nav-link">LogIn</a>
         </li>
         <li class="main-nav-item">
-          <a href="signup.html" class="main-nav-link">SignUp</a>
+          <a href="/signup" class="main-nav-link">SignUp</a>
         </li>
       </ul>
     </nav>
   </header>
-  <section class="container section-wrapper">
-    <% for(let card of cards) { %>
-    <div class="section-card">
+  <section class="container section-wrapper"> <% for(let card of cards) { %> <div class="section-card">
       <div class="section-card-image-wrapper">
         <img src="<%= card.cardImage %>" class="section-card-image" alt="event cover image" />
       </div>
       <div class="section-card-content-wrapper">
         <div class="section-card-content-header"> Cycling on the rcoe principals head </div>
-        <div class="section-card-content-description" style="max-height: 150px; min-height: 100px"> Lorem ipsum dolor sit amet consectetur adipisicing e lum quibusdam facilis. Quod sit, eaque Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem impedit quam numquam, excepturi, et perspiciatis hic  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque libero molestiae, illo itaque aspernatur porro ab voluptatibus delectus accusamus nobis. Quidem similique blanditiis officiis nostrum sint quia quasi vel aliquid! voluptatibus velit quo ipsa aspernatur illo aperiam repellendus quaerat sint molestiae minus? Expedita, aliquam.
-          nisi ullam laborum deserunt in quisquam possimus. </div>
+        <div class="section-card-content-description" style="max-height: 150px; min-height: 100px"> Lorem ipsum dolor
+          sit amet consectetur adipisicing e lum quibusdam facilis. Quod sit, eaque Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Rem impedit quam numquam, excepturi, et perspiciatis hic Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Cumque libero molestiae, illo itaque aspernatur porro ab voluptatibus
+          delectus accusamus nobis. Quidem similique blanditiis officiis nostrum sint quia quasi vel aliquid!
+          voluptatibus velit quo ipsa aspernatur illo aperiam repellendus quaerat sint molestiae minus? Expedita,
+          aliquam. nisi ullam laborum deserunt in quisquam possimus. </div>
         <div class="section-card-content-date">12 May</div>
         <div class="section-card-content-footer">
           <div class="section-card-content-price"><span>Paid: </span>350Rs</div>
@@ -48,10 +51,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <% } %>
-  </section>
+    </div> <% } %> </section>
   <footer>
     <div class="footer-container"> Made with <div class="footer-heart">❤</div> by FreakyHarsh </div>
   </footer>
-  <script src="../public/js/index.js"></script> <%- include('includes/footer') %>
+  <script src="../js/index.js"></script> <%- include('includes/footer') %>

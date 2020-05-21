@@ -109,8 +109,10 @@ main {
   padding: 1rem;
   color: #fff;
   border: 1px solid #fff;
-  -webkit-transition: scale 350ms ease-in;
-  transition: scale 350ms ease-in;
+  -webkit-transition: -webkit-transform 350ms ease-in;
+  transition: -webkit-transform 350ms ease-in;
+  transition: transform 350ms ease-in;
+  transition: transform 350ms ease-in, -webkit-transform 350ms ease-in;
 }
 
 .section-cards-wrapper .section-card .section-card-list a {

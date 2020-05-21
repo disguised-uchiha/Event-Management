@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<% include('includes/header') %>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../public/css/signup.css" />
+  <link rel="stylesheet" href="../css/signup.css" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <title>SignUp</title>
+  <title><%= pageTitle %></title>
 </head>
 
 <body>
-  <a href="index.html" class="signup-back-link"><i class="fa fa-caret-left" aria-hidden="true"></i> Back</a>
+  <a href="/" class="signup-back-link"><i class="fa fa-caret-left" aria-hidden="true"></i> Back</a>
   <div class="signup-wrap">
     <h2>Sign Up here</h2>
-    <form action="login.html">
+    <form action="/login">
       <input type="text" name="name" placeholder="First Name..." />
       <input type="text" name="name" placeholder="Last Name..." />
       <input type="email" name="email" placeholder="Email..." />
@@ -22,6 +18,4 @@
       <input type="submit" value="submit" />
     </form>
   </div>
-</body>
-
-</html>
+<%- include('includes/footer') %>

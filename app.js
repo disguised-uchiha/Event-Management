@@ -25,6 +25,27 @@ app.get('/', (req, res, next) => {
     res.render('index',{ 
         pageTitle: 'RCOE Events',
         cards: cards
-    })
+    });
+});
+
+app.get('/login', (req, res, next)=> {
+    res.render('login', {
+        pageTitle: 'login'
+    });
+});
+app.get('/signup', (req, res, next)=> {
+    res.render('signup', {
+        pageTitle: 'Sign Up'
+    });
+});
+app.get('/manage', (req, res, next)=> {
+    res.render('manage', {
+        pageTitle: 'Create/Manage'
+    });
+});
+app.get('/create', (req, res, next)=> {
+    res.render('create', {
+        pageTitle: 'Create Events'
+    });
 });
 app.listen(3000);
