@@ -38,7 +38,6 @@ body i {
 }
 
 .nav-list-item-link:hover {
-  text-transform: capitalize;
   color: yellow;
 }
 
