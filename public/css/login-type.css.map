@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/login/login-type.scss"
+    ],
+    "names": [],
+    "file": "login-type.css"
+}

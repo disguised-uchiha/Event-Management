@@ -18,6 +18,7 @@ body i {
     font-style: normal;
 }
 
+
 .nav-list {
     display: flex;
     justify-content: flex-end;
@@ -25,13 +26,12 @@ body i {
     &-item {
         list-style-type: none;
         margin: .5rem 1rem;
-        text-transform: uppercase;
         &-link {
             color: #fff;
-            transition: border-bottom 300ms;
         }
         &-link:hover {
-            border-bottom: 2px solid greenyellow;
+            text-transform: capitalize;
+            color: yellow;
         }
     }
 }

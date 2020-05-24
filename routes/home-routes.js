@@ -23,10 +23,28 @@ route.get('/', (req, res, next) => {
 });
 
 route.get('/login', (req, res, next)=> {
-    res.render('login', {
+    res.render('./login/login', {
         pageTitle: 'login'
     });
 });
+
+route.post('/login/login-type', (req, res, next) => {
+    res.render('./login/login-type', {
+        pageTitle: 'Login Type'
+    });
+});
+
+route.post('/login/guest-login', (req, res, next) => {
+    res.render('./login/guest-login', {
+        pageTitle: 'Guest Login'
+    });
+});
+route.post('/login/author-login', (req, res, next) => {
+    res.render('./login/author-login', {
+        pageTitle: 'Author Login'
+    });
+});
+
 route.get('/signup', (req, res, next)=> {
     res.render('signup', {
         pageTitle: 'Sign Up'

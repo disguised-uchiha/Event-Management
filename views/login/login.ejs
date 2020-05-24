@@ -1,17 +1,17 @@
-<% include('includes/header') %>
+<% include('../includes/header') %>
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="../css/signup.css">
 <title><%= pageTitle %></title>
 </head>
 
 <body>
-    <a href="/" class="signup-back-link"><i class="fa fa-caret-left" aria-hidden="true"></i> Back</a>
+    <a href="/" class="signup-back-link"><i class="fa fa-caret-left" aria-hidden="true"></i> HOME</a>
     <div class="signup-wrap">
         <h2>LogIn</h2>
-        <form action="manage" method="POST">
+        <form action="/login/login-type" method="POST">
             <input type="email" name="email" placeholder="Email...">
             <input type="password" name="pwd" placeholder="Password...">
             <input type="submit" value="submit">
         </form>
         <div class="signup-create-account">Create a new Accout: <a href="/signup">signup here</a></div>
-    </div> <% include('includes/footer') %>
+    </div> <% include('../includes/footer') %>

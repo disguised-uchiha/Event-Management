@@ -1,0 +1,18 @@
+<% include('../includes/header') %> <title><%= pageTitle %></title>
+<link rel="stylesheet" href="/css/login-type.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="login-type-header-wrapper">
+            <h2>Welcome HarshBoricha</h2>
+        </header>
+        <section class="login-type-section-wrapper">
+            <div class="login-type-guest">
+                <form action="guest-login" method="POST"><button type="submit">Guest Login</button></form>
+            </div>
+            <div class="login-type-author" method="POST">
+                <form action="author-login" method="POST"><button type="submit">Author Login</button></form>
+            </div>
+        </section>
+    </main> <% include('../includes/footer') %>

@@ -31,17 +31,15 @@ body i {
 .nav-list-item {
   list-style-type: none;
   margin: .5rem 1rem;
-  text-transform: uppercase;
 }
 
 .nav-list-item-link {
   color: #fff;
-  -webkit-transition: border-bottom 300ms;
-  transition: border-bottom 300ms;
 }
 
 .nav-list-item-link:hover {
-  border-bottom: 2px solid greenyellow;
+  text-transform: capitalize;
+  color: yellow;
 }
 
 main {
@@ -168,4 +166,4 @@ main {
         grid-template-columns: 45% 45%;
   }
 }
-/*# sourceMappingURL=manage.css.map */
+/*# sourceMappingURL=author-login.css.map */
