@@ -64,6 +64,10 @@
     text-decoration: none;
     color: white;
     font-weight: weight(medium);
+    transition: color 300ms ease;
+  }
+  .main-nav-link:hover {
+    color: yellow;
   }
 }
 
@@ -78,6 +82,7 @@
   
   .section-card {
     width: 100%;
+    height: 400px;
     background-color: $primary-color;
     color: white;
     border-radius: 5%;
@@ -90,8 +95,7 @@
     }
     
     .section-card-image {
-      width: 100%;
-      height: 100%;
+      @include section-card-content-container(100%, 100%);
       display: block;
       border-radius: 1em;
     }
@@ -115,7 +119,6 @@
       .section-card-content-description {
         font-weight: weight(regular);
         text-overflow: ellipsis;
-        // text-align: justify;
         overflow: hidden;
         
       }
@@ -127,9 +130,8 @@
     }
     
     .button {
-      background-color: red;
       border: none;
-      border-radius: 1rem 1rem;
+      border-radius: .5rem;
       padding: .5em;
       font-size: 1rem;
       text-align: center;
@@ -137,7 +139,14 @@
       text-transform: uppercase;
       margin-right: 1rem;
       background-color: $secondary-color;
+      color: green;
       font-weight: weight(bold);
+      transition: background-color 300ms, color 400ms, border-radius 250ms;
+    }
+    .button:hover {
+      background-color: white;
+      color: red;
+      border-radius: 1rem;
     }
   }
   .section-card:hover {
@@ -145,7 +154,7 @@
   }
 }
 footer {
-  position:fixed; 
+  position: relative; 
   bottom: 0; 
   width: 100%;
   background-color: $shade1;
