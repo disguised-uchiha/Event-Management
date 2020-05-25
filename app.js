@@ -19,4 +19,6 @@ app.use((req, res, next) => {
   res.render("404");
 });
 app.listen(3000);
-mongoose.connect('mongodb+srv://harsh:${DB_PASSWORD}@cluster0-lfbed.mongodb.net/test?retryWrites=true&w=majority',)
+
+
+mongoose.connect('mongodb+srv://harsh:${process.env.DB_PASSWORD}@cluster0-lfbed.mongodb.net/test?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true} )
