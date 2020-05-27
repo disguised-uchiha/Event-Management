@@ -1,2 +1,4 @@
 # Ignore the .env file which contains sensitive information
 .env
+# no need for node modules
+node_modules

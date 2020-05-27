@@ -9,13 +9,41 @@
   <a href="/" class="signup-back-link"><i class="fa fa-caret-left" aria-hidden="true"></i> Back</a>
   <div class="signup-wrap">
     <h2>Sign Up here</h2>
-    <form action="/login">
+    <form action="/signup/submit" onsubmit="checkPassword(this)" method="POST">
       <input type="text" name="name" placeholder="First Name..." />
       <input type="text" name="name" placeholder="Last Name..." />
       <input type="email" name="email" placeholder="Email..." />
       <input type="password" name="pwd" placeholder="Password..." />
-      <input type="password" name="conf-pwd" placeholder="Confirm Password..." />
+      <input type="password" name="conf_pwd" placeholder="Confirm Password..." />
       <input type="submit" value="submit" />
     </form>
   </div>
+  <script> 
+          
+    // Function to check Whether both passwords 
+    // is same or not. 
+    function checkPassword(form) { 
+        let password1 = form.pwd.value; 
+        let password2 = form.conf_pwd.value; 
+        
+        // If password not entered 
+        if (password1 == '') 
+            alert ("Please enter Password"); 
+              
+        // If confirm password not entered 
+        else if (password2 == '') 
+            alert ("Please enter confirm password"); 
+              
+        // If Not same return False.     
+        else if (password1 != password2) { 
+            alert ("\nPassword did not match: Please try again...") 
+            return false; 
+        } 
+
+        // If same return True. 
+        else{  
+            return true; 
+        } 
+    } 
+</script>
 <%- include('includes/footer') %>
