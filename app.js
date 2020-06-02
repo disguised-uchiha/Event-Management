@@ -12,7 +12,7 @@ mongoose.connect(
 );
 
 const app = express();
-// My Routes
+
 const homeRoute = require("./routes/home-routes");
 
 app.set("view engine", "ejs");
