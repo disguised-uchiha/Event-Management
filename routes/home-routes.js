@@ -34,7 +34,7 @@ route.post("/manage", (req, res, next) => {
     pageTitle: "Create/Manage",
   });
 });
-// TODO: convert the get create to POST 
+// TODO: convert the get create to POST
 route.get("/create", (req, res, next) => {
   res.render("create", {
     pageTitle: "Create Events",
