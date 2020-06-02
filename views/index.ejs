@@ -30,17 +30,17 @@
       </ul>
     </nav>
   </header>
-  <section class="container section-wrapper"> <% for(let card of cards) { %> <div class="section-card">
+  <section class="container section-wrapper"> <% for(let event of events) { %> <div class="section-card">
       <div class="section-card-image-wrapper">
-        <img src="<%= card.cardImage %>" class="section-card-image" alt="event cover image" />
+        <img src="../public/images/2.png" class="section-card-image" alt="event cover image" />
       </div>
       <div class="section-card-content-wrapper">
-        <div class="section-card-content-header"> Cycling on the rcoe principals head </div>
-        <div class="section-card-content-description" style="max-height: 150px; min-height: 100px"> Lorem ipsumatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, enim molestiae expedita deleniti est rem maxime eius dicta, alias inventore odit quam neque rerum excepturi, beatae cupiditate minima possimus nihil.
-          delectus accusamus nobis. Quideuisquam possimus. </div>
-        <div class="section-card-content-date">12 May</div>
+        <div class="section-card-content-header"> <%= event.Name %> </div>
+        <div class="section-card-content-description" style="max-height: 150px; min-height: 100px">
+          <%= event.Description %> </div>
+        <div class="section-card-content-date">Date: <%= event.date %></div>
         <div class="section-card-content-footer">
-          <div class="section-card-content-price"><span>Paid: </span>350Rs</div>
+          <div class="section-card-content-price"><span><%= event.type %>: </span><%= event.fees %></div>
           <div class="section-card-content-apply">
             <a href="#" class="button">Details</a>
             <a href="#" class="button">Apply</a>

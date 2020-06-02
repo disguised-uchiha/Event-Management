@@ -1,18 +1,18 @@
 const userModel = require("../models/signup");
 
 module.exports.getUserInformation = (req, res, next) => {
-  let userData = req.body;
-  let [firstName, lastName] = userData.name;
-  let email = userData.email;
-  let pwd = userData.pwd;
+  let [firstName, lastName] = req.body.name;
 
   let user = new userModel({
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: pwd,
-    });
-    user.save().then(res => console.log(res)).catch(err => console.log(err));
+    firstName: firstName,
+    lastName: lastName,
+    email: req.body.email,
+    password: req.body.pwd,
+  });
+  user
+    .save()
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
 
   res.render("signup", {
     pageTitle: "Sign Up",

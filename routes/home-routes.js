@@ -1,38 +1,17 @@
 const express = require("express");
 
 const route = express.Router();
-// creating a local card array for lorem purpose
+
+// all the controllers
 const singupController = require("../controllers/signup");
 const loginController = require("../controllers/login");
-
-const cards = [
-  {
-    cardImage: "/images/1.jpg",
-  },
-  {
-    cardImage: "/images/1.jpg",
-  },
-  {
-    cardImage: "/images/1.jpg",
-  },
-  {
-    cardImage: "/images/1.jpg",
-  },
-];
-route.get("/", (req, res, next) => {
-  res.render("index", {
-    pageTitle: "RCOE Events",
-    cards: cards,
-  });
-});
+const createEventController = require("../controllers/createEvent");
+const homePageController = require("../controllers/homepage");
+route.get("/", homePageController.home);
 
 route.get("/login", loginController.getLoginPage);
 
-route.post("/login/login-type", (req, res, next) => {
-  res.render("./login/login-type", {
-    pageTitle: "Login Type",
-  });
-});
+route.post("/login/login-type", loginController.loginType);
 
 route.post("/login/guest-login", (req, res, next) => {
   res.render("./login/guest-login", {
@@ -55,11 +34,13 @@ route.post("/manage", (req, res, next) => {
     pageTitle: "Create/Manage",
   });
 });
-
+// TODO: convert the get create to POST 
 route.get("/create", (req, res, next) => {
   res.render("create", {
     pageTitle: "Create Events",
   });
 });
+
+route.post("/createEvent", createEventController.createEvent);
 
 module.exports = route;

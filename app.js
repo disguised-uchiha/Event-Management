@@ -6,10 +6,10 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 
-// mongoose.connect(
-//   `mongodb+srv://harsh:${process.env.PWD}@cluster0-tnkfh.mongodb.net/eventDB?retryWrites=true&w=majority`,
-//   { useNewUrlParser: true, useUnifiedTopology: true }
-// );
+mongoose.connect(
+  `mongodb+srv://harsh:${process.env.PWD}@cluster0-ljwh6.mongodb.net/database?retryWrites=true&w=majority`,
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 
 const app = express();
 // My Routes

@@ -1,11 +1,12 @@
 <%- include('includes/header') %>
-    <link rel="stylesheet" href="../css/create.css">
-    <title><%= pageTitle %></title>
+<link rel="stylesheet" href="../css/create.css">
+<title><%= pageTitle %></title>
 </head>
+
 <body>
     <main class="main-container">
         <div class="main-form-wrapper">
-            <form action="/" method="POST">
+            <form action="/createEvent" method="POST">
                 <div class="event-header-container">
                     <label for="event-name">Event Name:</label>
                     <input type="text" name="event-name" id="event-name">
@@ -19,6 +20,10 @@
                     <label for="event-date">Date: </label>
                     <input type="date" name="event-date">
                 </div>
+                <div class="event-date-container">
+                    <label for="event-time">Time: </label>
+                    <input type="time" name="event-time">
+                </div>
                 <div class="event-location-container">
                     <label for="event-location">Location: </label>
                     <input type="text" name="event-location">
@@ -31,8 +36,8 @@
                     </select>
                     <label for="certified">Certificate: </label>
                     <select name="certified">
-                        <option value="certificate-yes">Yes </option>
-                        <option value="certificate-no">No </option>
+                        <option value=1> Yes </option>
+                        <option value=0> No </option>
                     </select>
                 </div>
                 <div class="event-charge-container" id="event-charge-id">
@@ -45,5 +50,4 @@
             </form>
         </div>
     </main>
-    <script src="../js/create.js"></script>
-<%- include('includes/footer') %>
+    <script src="../js/create.js"></script> <%- include('includes/footer') %>
